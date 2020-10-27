@@ -1,0 +1,7 @@
+ARG_ENABLE('cooper_b', 'cooper_b support', 'no');
+
+if (PHP_COOPER_B != 'no') {
+	AC_DEFINE('HAVE_COOPER_B', 1, 'cooper_b support enabled');
+
+	EXTENSION('cooper_b', 'cooper_b.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
